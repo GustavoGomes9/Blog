@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Author(models.Model):
     author_name = models.CharField(max_length=255)
@@ -20,4 +21,6 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    
 

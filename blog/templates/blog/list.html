@@ -1,1 +1,27 @@
 {% extends 'blog/base.html' %}
+
+{% block title %}Lista{% endblock title %}
+
+{% block content %}
+    {% for post in post_list %}
+        <div class="full_article">
+            <h3>   
+                <a href="/blog/{{ post.id }}/">
+                    {{post.title}}
+                <a/>
+            </h3>
+            <div class="article">
+                <h3 style="color:grey">
+                        {{post.post|linebreaks|truncatewords:10}}
+                </h3>
+            </div>
+            <div class="date_row">
+                <div class="date">
+                    <div class="date_created">
+                        <span style="color:grey">{{post.post_date_created}} por {{post.author}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
