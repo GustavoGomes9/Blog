@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'standard-title' ;
+    src: local('Merriweather-Bold'),
+        url('../fonts/Merriweather-Bold.ttf');
+    
+    font-family: 'standard-text';
+    src: local('Merriweather-Regular'),
+        url('../fonts/Merriweather-Regular.ttf')
+}
+.author-img-responsive{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+.content{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+}
+.post-content{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+.post-container{
+    position: relative;
+    width: 50%;
+    min-height: 250px;
+}
+#post{
+    display: block;
+    font-family: standard-text;
+    font-size: 21px;
+}
+.author-row{
+    justify-content: space-around;
+}
+#title{
+    font-size: 46px;
+    font-family: standard-title;
+}
+#title-list{
+    font-size: 42px;
+    font-family: standard-title;
+}
+#link-title{
+    color:black;
+    text-decoration: none;
+}
+.article{
+    font-family: standard-text;
+}

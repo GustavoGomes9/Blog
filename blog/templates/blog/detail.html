@@ -1,6 +1,23 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {{post}}
+    <h1 id="title">{{post.title}}</h1>
+    <div class="title-author-row">
+        <div class="author-row">
+            <div class="author-span">
+                <img class="author-img-responsive" src="{{post.author.author_image.url}}">
+                <span style="color:green">{{post.author}}</span>
+                <span style="color:grey">·</span>
+                <span style="color:grey">{{post.post_date_created}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="post-content">
+        <div class="post-container">
+            <p id="post">
+                {{post.post}}
+            </p>
+        </div>
+    </div>
 {% endblock content %}
 

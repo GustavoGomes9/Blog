@@ -1,12 +1,10 @@
 {% extends 'blog/base.html' %}
 
-{% block title %}Lista{% endblock title %}
-
 {% block content %}
     {% for post in post_list %}
         <div class="full_article">
-            <h3>   
-                <a href="/blog/{{ post.id }}/">
+            <h3 id="title-list">   
+                <a href="{{ post.get_absolute_url }}" id="link-title">
                     {{post.title}}
                 <a/>
             </h3>
